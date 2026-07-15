@@ -25,6 +25,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/treatments`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${base}/commercial`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${base}/locations`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${base}/contact`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${base}/about`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${base}/faq`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${base}/privacy`, lastModified: now, changeFrequency: 'yearly', priority: 0.2 },
+    { url: `${base}/terms`, lastModified: now, changeFrequency: 'yearly', priority: 0.2 },
   ]
 
   // Service pages

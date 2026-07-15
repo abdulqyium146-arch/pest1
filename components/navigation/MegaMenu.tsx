@@ -172,12 +172,13 @@ const NAV_ITEMS: NavItem[] = [
   {
     kind: 'dropdown',
     label: 'Resources',
-    href: '/resources',
+    href: '/faq',
     links: [
-      { label: 'Pest Prevention Guides', href: '/prevention' },
-      { label: 'Treatment Guides', href: '/treatments' },
-      { label: 'FAQ', href: '/faq' },
       { label: 'Pest Identification Guide', href: '/pests' },
+      { label: 'Treatment Methods Guide', href: '/treatments' },
+      { label: 'FAQ', href: '/faq' },
+      { label: 'About OCP Pest Control', href: '/about' },
+      { label: 'Contact Us', href: '/contact' },
     ],
   },
 ]

@@ -114,12 +114,12 @@ export function Footer() {
                 </li>
               ))}
               <li>
-                <Link href="/services/organic-pest-control" className={linkClass}>
+                <Link href="/treatments/organic-pest-control" className={linkClass}>
                   Eco-Friendly Pest Control
                 </Link>
               </li>
               <li>
-                <Link href="/services/pest-inspection" className={linkClass}>
+                <Link href="/services" className={linkClass}>
                   Pest Inspection
                 </Link>
               </li>
@@ -164,22 +164,22 @@ export function Footer() {
             <ColHeading>Resources</ColHeading>
             <ul className="space-y-2">
               <li>
-                <Link href="/prevention" className={linkClass}>
+                <Link href="/treatments" className={linkClass}>
                   Pest Prevention Guide
                 </Link>
               </li>
               <li>
-                <Link href="/prevention/termite-prevention" className={linkClass}>
+                <Link href="/services/termite-control" className={linkClass}>
                   Termite Prevention
                 </Link>
               </li>
               <li>
-                <Link href="/prevention/bed-bug-prevention" className={linkClass}>
+                <Link href="/services/bed-bug-extermination" className={linkClass}>
                   Bed Bug Prevention
                 </Link>
               </li>
               <li>
-                <Link href="/prevention/rodent-prevention" className={linkClass}>
+                <Link href="/services/rat-rodent-control" className={linkClass}>
                   Rodent Prevention
                 </Link>
               </li>
@@ -199,8 +199,8 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className={linkClass}>
-                  Pest Control Blog
+                <Link href="/pests" className={linkClass}>
+                  Pest Control Library
                 </Link>
               </li>
             </ul>
