@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── CSS Custom Properties ──────────────────────────────────────────────────
+   Font variables are populated by next/font/google in layout.tsx.
+   These fallback values are used during font loading — they match generic
+   system UI fonts so layout shift is minimal.
+   ─────────────────────────────────────────────────────────────────────────── */
+:root {
+  --font-sora: 'Sora', ui-sans-serif, system-ui, sans-serif;
+  --font-inter: 'Inter', ui-sans-serif, system-ui, sans-serif;
+}
+
+/* ─── Base resets ────────────────────────────────────────────────────────────
+   Minimal — Tailwind's preflight handles most resets. We add only what's
+   needed for accessibility and design quality.
+   ─────────────────────────────────────────────────────────────────────────── */
+@layer base {
+  /* Smooth scroll — improves anchor link UX for FAQ and on-page navigation */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Body defaults — Inter body font, near-black text on light bg */
+  body {
+    font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+    color: theme('colors.neutral.950');
+    background-color: theme('colors.neutral.50');
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Visible focus rings — WCAG 2.4.7 compliance.
+     We use focus-visible so mouse users don't see the ring on click,
+     but keyboard users always see it clearly. */
+  :focus-visible {
+    outline: 2px solid theme('colors.accent.DEFAULT');
+    outline-offset: 2px;
+  }
+
+  /* Remove default focus ring in favor of our custom one */
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  /* Headings use display (Sora) font */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-sora), ui-sans-serif, system-ui, sans-serif;
+  }
+
+  /* Ensure images don't overflow their containers */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Lists in prose content should have visible markers */
+  ul {
+    list-style: none;
+  }
+
+  /* Reduce motion for users who prefer it — accessibility requirement */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
